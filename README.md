@@ -1,28 +1,42 @@
-# FiscalDep
+# Desafio front-end - Fiscal de deputados
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.0.3.
+Projeto criado para testar conhecimentos de Front-end
 
-## Development server
+## Case
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Você, como programador e cidadão, decidiu colocar em prática as suas habilidades de programador front-end para criar uma plataforma que permita fiscalizar os nossos deputados federais. Para isso, você irá utilizar a API da câmara dos deputados [API](https://dadosabertos.camara.leg.br/swagger/api.html?ref=devresourc.es)
 
-## Code scaffolding
+## Casos de uso
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- [x] Buscar deputados (CUO1)
+- [x] Exibir perfil detalhado do deputado (CUO2)
 
-## Build
+## Casos de uso extra
+- [x] Buscar despesas no ano atual de um deputado (CUE1)
+- [x] Exibir a última despesa do deputado no seu perfil (CUE2)
+- [x] Exibir a maior despesa do deputado no seu perfil (CUE3)
+- [x] Buscar projetos de lei de um deputado (CUE4)
+- [x] Exibir detalhes de um projeto de lei (CUE5)
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+## Get Started
 
-## Running unit tests
+Development:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+### `ng serve`
 
-## Running end-to-end tests
+Build:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+### `ng build`
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
-"# fiscal-dep" 
+### 🛠 Tecnologias
+
+As seguintes ferramentas foram usadas na construção do projeto:
+
+- [Angular](https://angular.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [React Icons](https://react-icons.github.io/react-icons/)
+
+### Link
+
+Link com o projeto hospedado no Netlify: [FiscalDeputado](https://fiscal-deputado.netlify.app/)
