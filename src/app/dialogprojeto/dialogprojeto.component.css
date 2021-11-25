@@ -1,0 +1,25 @@
+img {
+  width: 150px;
+  height: 150px;
+  margin-right: 50px;
+  //left: 30%;
+  border-radius: 50%;
+}
+.buttons {
+  display: flex;
+  margin-top: 4px;
+}
+.despesasButton {
+  margin-top: 2px;
+}
+.spacer {
+  left: 80%;
+  margin-bottom: 10px;
+}
+.spacebutton {
+  width: 20;
+  height: 20;
+}
+.tituloDialog {
+  margin: 0 auto;
+}

@@ -1,0 +1,59 @@
+<button class="spacer" mat-icon-button mat-dialog-close>
+  <mat-icon>close</mat-icon>
+</button>
+<div mat-dialog-content>
+  <ul *ngFor="let d of data | slice: 0:1">
+    <img
+      src="{{ !d.ultimoStatus.urlFoto ? '' : d.ultimoStatus.urlFoto }}"
+      alt="img"
+    />
+
+    <li><span>Nome: </span> {{ d.ultimoStatus.nome }}</li>
+
+    <li><span>Partido: </span> {{ d.ultimoStatus.siglaPartido }}</li>
+    <li>
+      <span>Data de Nascimento: </span>
+      {{ d.dataNascimento | date: "dd/MM/yyyy":"pt-br" }}
+    </li>
+    <li>
+      <span>Site: </span>
+      {{ d.urlWebsite === null ? "-" : d.urlWebsite }}
+    </li>
+    <li><span>E-Mail: </span> {{ d.ultimoStatus.email }}</li>
+    <div class="spacebetween"></div>
+    <app-cardevent
+      [events]="data | slice: data.length - 1:data.length"
+    ></app-cardevent>
+    <div class="spacebetween"></div>
+    <app-carddespesa [despesas]="despesas | slice: 0:1"></app-carddespesa>
+    <div class="spacebetween"></div>
+    <app-cardultdespesa
+      [ultDespesa]="ultimaDespesa | slice: 0:1"
+    ></app-cardultdespesa>
+  </ul>
+</div>
+
+<div class="buttons">
+  <div class="despesasButton" *ngFor="let d of data | slice: 0:1">
+    <span class="spacebetween"></span>
+    <button
+      *ngFor="let d of data | slice: 0:1"
+      mat-raised-button
+      color="primary"
+      (click)="openDespesas(d.ultimoStatus.id)"
+      mat-dialog-close
+    >
+      Despesas
+    </button>
+    <span class="spacebutton"></span>
+    <button
+      *ngFor="let d of data | slice: 0:1"
+      mat-raised-button
+      color="primary"
+      (click)="openProjetos(d.ultimoStatus.id)"
+      mat-dialog-close
+    >
+      Projetos
+    </button>
+  </div>
+</div>

@@ -1,0 +1,38 @@
+<button class="spacer" mat-icon-button mat-dialog-close>
+  <mat-icon>close</mat-icon>
+</button>
+<div mat-dialog-content>
+  <ul *ngFor="let d of data | slice: 0:1">
+    <li><span>Número: </span> {{ d.numero }}</li>
+
+    <li>
+      <span>Data de Apresentacao: </span>
+      {{ d.dataApresentacao | date: "dd/MM/yyyy":"pt-br" }}
+    </li>
+    <li>
+      <span>Ementa: </span>
+      {{ d.ementa }}
+    </li>
+    <li>
+      <span>Ementa Detalhada: </span>
+      {{ d.ementaDetalhada === (null || "") ? " - " : d.ementaDetalhada }}
+    </li>
+    <li>
+      <span>Situação: </span>
+      {{
+        d.statusProposicao.descricaoSituacao === null
+          ? " - "
+          : d.statusProposicao.descricaoSituacao
+      }}
+    </li>
+    <li>
+      <span>Link: </span>
+      {{ d.statusProposicao.url === null ? " - " : d.statusProposicao.url }}
+    </li>
+  </ul>
+</div>
+
+<div class="buttons">
+  <span class="spacebutton"></span>
+  <button mat-raised-button color="primary" mat-dialog-close>Close</button>
+</div>

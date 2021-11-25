@@ -1,0 +1,37 @@
+<app-header [titulo]="'DESPESAS'"></app-header>
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-header="tipoDespesa">Despesa</th>
+    <th mat-header="nomeFornecedor">Fornecedor</th>
+    <th mat-sort-header="valorDocumento">Valor (R$)</th>
+    <th mat-sort-header="dataDocumento">Data</th>
+    <th mat-header="urlDocumento">Comprovante</th>
+  </tr>
+
+  <tr *ngFor="let dessert of sortedData | slice: 0:slice">
+    <td>{{ dessert.tipoDespesa }}</td>
+    <td>{{ dessert.nomeFornecedor }}</td>
+    <td>{{ dessert.valorDocumento | currency: "BRL" }}</td>
+    <td>{{ dessert.dataDocumento | date: "dd/MM/YYYY" }}</td>
+    <td>
+      <a target="_blank" href="{{ dessert.urlDocumento }}">Documento</a>
+    </td>
+  </tr>
+</table>
+<div class="loadingMore">
+  <button
+    class="loadingB"
+    mat-raised-button
+    color="primary"
+    (click)="loadMore()"
+  >
+    Carregar mais
+    <mat-icon>forward_10</mat-icon>
+  </button>
+</div>
+<div class="loadingMore">
+  <button class="loadingB" mat-raised-button color="accent" (click)="goBack()">
+    Voltar
+    <mat-icon>forward_10</mat-icon>
+  </button>
+</div>

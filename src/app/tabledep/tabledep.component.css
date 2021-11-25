@@ -1,0 +1,56 @@
+table {
+  border: 1px solid gray;
+  width: 60%;
+  align-content: center;
+  margin: auto;
+}
+
+th,
+td {
+  border: 1px;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+.selectButton {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  //margin: 0 auto;
+  margin-bottom: 6px;
+  margin-left: 40%;
+}
+
+.textHeader {
+  text-align: left;
+  font-size: 22px;
+}
+
+.loadingMore {
+  display: flex;
+  //width: 100%;
+}
+.loadingB {
+  margin: 0 auto;
+  margin-top: 10px;
+}
+.infobutton {
+  left: 40%;
+}
+.mat-radio-button ~ .mat-radio-button {
+  margin-left: 16px;
+}

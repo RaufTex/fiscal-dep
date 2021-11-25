@@ -1,0 +1,13 @@
+<mat-card *ngFor="let e of events">
+  <div class="tituloEvent">
+    <strong>Último Evento: </strong>
+  </div>
+  <div>
+    <span>{{
+      !e.descricaoTipo ? "SEM DADOS NO MOMENTO" : e.descricaoTipo
+    }}</span>
+  </div>
+  <div>
+    {{ e.dataHoraInicio | date: "dd/MM/yyyy HH:mm" }}
+  </div>
+</mat-card>

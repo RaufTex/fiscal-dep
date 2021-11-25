@@ -1,0 +1,14 @@
+<mat-card *ngFor="let desp of ultDespesa">
+  <div class="tituloEvent">
+    <strong>Maior Despesa: </strong>
+  </div>
+  <div>
+    <span>{{ desp.tipoDocumento }}</span>
+  </div>
+  <div>
+    {{ desp.valorDocumento | currency: "BRL" }}
+  </div>
+  <div>
+    {{ desp.dataDocumento | date: "dd/MM/YYYY" }}
+  </div>
+</mat-card>

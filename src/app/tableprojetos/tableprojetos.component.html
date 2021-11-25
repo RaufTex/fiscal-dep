@@ -1,0 +1,42 @@
+<app-header [titulo]="'Projetos de Lei'"></app-header>
+<table matSort (matSortChange)="sortData($event)">
+  <tr>
+    <th mat-sort-header="numero">Número</th>
+    <th mat-sort-header="ano">Ano</th>
+    <th mat-header="ementa">Ementa</th>
+    <th mat-header="detalhes">Detalhes</th>
+  </tr>
+
+  <tr *ngFor="let dessert of sortedData | slice: 0:slice">
+    <td>{{ dessert.numero }}</td>
+    <td>{{ dessert.ano }}</td>
+    <td>{{ dessert.ementa }}</td>
+    <td>
+      <button
+        class="infobutton"
+        mat-icon-button
+        aria-label="Example icon button with a plus one icon"
+        (click)="openDialog(dessert.id)"
+      >
+        <mat-icon>info</mat-icon>
+      </button>
+    </td>
+  </tr>
+</table>
+<div class="loadingMore">
+  <button
+    class="loadingB"
+    mat-raised-button
+    color="primary"
+    (click)="loadMore()"
+  >
+    Carregar mais
+    <mat-icon>forward_5</mat-icon>
+  </button>
+</div>
+<div class="loadingMore">
+  <button class="loadingB" mat-raised-button color="accent" (click)="goBack()">
+    Voltar
+    <mat-icon>forward_5</mat-icon>
+  </button>
+</div>

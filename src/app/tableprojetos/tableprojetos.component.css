@@ -1,0 +1,47 @@
+table {
+  border: 1px solid gray;
+  width: 60%;
+  align-content: center;
+  margin: auto;
+  margin-top: 20px;
+}
+
+.mat-form-field {
+  font-size: 14px;
+  width: 100%;
+}
+
+td,
+th {
+  border: 1px solid;
+}
+
+img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.example-form {
+  min-width: 150px;
+  max-width: 500px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.example-full-width {
+  width: 100%;
+}
+
+.textHeader {
+  text-align: center;
+}
+
+.loadingMore {
+  display: flex;
+  //width: 100%;
+}
+.loadingB {
+  margin: 0 auto;
+  margin-top: 10px;
+}

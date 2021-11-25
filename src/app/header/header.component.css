@@ -1,0 +1,12 @@
+.example-spacer {
+  flex: 1 1 auto;
+}
+.spacer {
+  margin: 0 auto;
+  flex: 1;
+}
+.mat {
+  font-size: 1.5rem;
+  height: 80px;
+  margin-bottom: 2px;
+}
